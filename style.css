@@ -318,3 +318,96 @@ width: 550px;
 .card-papa {
     background-image: url("./images/product-4.jpg");
 }
+/* !АДАПТИВ */
+
+@media (max-width: 768px) { .header .container { flex-direction: column; align-items: flex-start;  padding: 15px;  }
+
+.header__nav {
+    display: flex; /* Используем flex для навигации */
+    justify-content: center; /* Центрируем пункты навигации */
+    width: 100%; /* Устанавливаем ширину на 100% */
+}
+
+.header__list {
+    display: flex; /* flex для списка */
+    flex-direction: column; /* Размещаем пункты друг под другом */
+    align-items: center; /* Центрируем пункты списка */
+    gap: 10px; /* Отступы между пунктами */
+    padding: 10px 0; /* Отступы сверху и снизу */
+}
+
+.welcome__text {
+    width: 100%; /* Занимаем всю ширину */
+    text-align: center; /* Центрируем текст */
+    padding: 0 15px; /* Добавляем отступы с боков */
+}
+
+.food-list .container {
+    flex-direction: column; /* Изменяем на колонку для мобильных */
+    align-items: center; /* Центрируем элементы */
+}
+
+.food-list__card {
+    width: 100%; /* Занимаем всю ширину */
+    max-width: 320px; /* Максимальная ширина карточек */
+    margin-bottom: 20px; /* Отступ между карточками */
+}
+
+.order .container {
+    flex-direction: column; /* Изменяем на колонку для мобильных */
+    align-items: center; /* Центрируем контент */
+}
+
+.order__img {
+    max-width: 100%; /* Чтобы изображение адаптировалось */
+    height: auto; /* Сохраняем пропорции изображения */
+}
+
+.product .container {
+    flex-direction: column; /* Расположение карточек в колонку */
+    align-items: center; /* Центрируем карточки */
+}
+
+.product__card {
+    width: 100%; /* Занимаем всю ширину */
+    max-width: 320px; /* Ограничиваем максимальную ширину */
+    padding: 20px; /* Увеличиваем отступы внутри карточек */
+}
+
+/* Уменьшение размеров шрифтов для мобильных */
+.welcome__title {
+    font-size: 32px; /* Уменьшаем размер заголовка */
+}
+
+.food-list__title {
+    font-size: 18px; /* Уменьшаем размер заголовка в карточках еды */
+}
+
+.order__title {
+    font-size: 24px; /* Уменьшаем размер заголовка для бургера */
+}
+
+.product__title {
+    font-size: 24px; /* Уменьшаем заголовок карточек товаров */
+}
+
+/* Изменяем размер кнопок */
+.btn {
+    width: 100%; /* Кнопка занимает всю ширину */
+    margin: 10px 0; /* Отступы между кнопками */
+} 
+}
+
+
+/* ! МОДАЛЬНОЕ ОКНО */
+.modal { 
+    display: none;  
+    position: fixed;  
+    z-index: 1000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height : 100%; 
+    overflow:auto; 
+    background-color: rgba(0, 0, 0, 0.8); 
+}
