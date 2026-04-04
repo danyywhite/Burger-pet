@@ -487,86 +487,389 @@ content: url(./images/icons/global.svg)
 
 /* !АДАПТИВ */
 
-@media (max-width: 768px) { .header .container { flex-direction: column; align-items: flex-start;  padding: 15px;  }
+/* ! АДАПТИВ ДЛЯ ВСЕХ УСТРОЙСТВ */
 
-.header__nav {
-    display: flex; /* Используем flex для навигации */
-    justify-content: center; /* Центрируем пункты навигации */
-    width: 100%; /* Устанавливаем ширину на 100% */
+/* ПЛАНШЕТЫ (iPad 768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .header .container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .welcome {
+        padding: 180px 0;
+        min-height: auto;
+    }
+    
+    .welcome__title {
+        font-size: 44px;
+    }
+    
+    .food-list .container {
+        justify-content: center;
+    }
+    
+    .order .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 15px;
+    }
+    
+    .order__img {
+        max-width: 400px;
+        margin-bottom: 30px;
+    }
+    
+    .product .container {
+        justify-content: center;
+    }
+    
+    .product__card {
+        width: 48%;
+        min-height: 280px;
+        padding: 40px 20px 40px 220px;
+    }
+    
+    .product__card:nth-child(even) {
+        padding-left: 220px;
+        padding-right: 20px;
+    }
+    
+    .feedback .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .feedback__img {
+        margin-bottom: 30px;
+        max-width: 300px;
+    }
+    
+    .footer .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .footer__contacts {
+        align-items: center;
+    }
+    
+    .footer__list {
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .footer__socials-icons {
+        display: flex;
+        justify-content: center;
+    }
 }
 
-.header__list {
-    display: flex; /* flex для списка */
-    flex-direction: column; /* Размещаем пункты друг под другом */
-    align-items: center; /* Центрируем пункты списка */
-    gap: 10px; /* Отступы между пунктами */
-    padding: 10px 0; /* Отступы сверху и снизу */
+/* iPhone SE (375x667) и все узкие телефоны до 480px */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Шапка */
+    .header {
+        padding: 15px 0;
+    }
+    
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .header__list {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .header__nav a {
+        font-size: 16px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    /* Welcome секция */
+    .welcome {
+        margin-top: 0;
+        padding: 100px 0;
+        min-height: auto;
+        background-position: 70% center;
+    }
+    
+    .welcome__text {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .welcome__title {
+        font-size: 32px;
+    }
+    
+    .welcome__subtitle {
+        font-size: 12px;
+    }
+    
+    .welcome__desc {
+        font-size: 14px;
+        margin: 20px 0;
+    }
+    
+    /* Food list */
+    .food-list {
+        padding: 50px 0;
+    }
+    
+    .food-list .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .food-list__card {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Order секция */
+    .order {
+        padding: 40px 0;
+    }
+    
+    .order .container {
+        flex-direction: column;
+        padding: 0 15px;
+        text-align: center;
+    }
+    
+    .order__img {
+        max-width: 280px;
+        margin-bottom: 25px;
+    }
+    
+    .order__title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .order__desc {
+        font-size: 14px;
+    }
+    
+    /* Product карточки */
+    .product {
+        padding: 50px 0;
+    }
+    
+    .product .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .product__card {
+        width: 100%;
+        max-width: 320px;
+        min-height: auto;
+        padding: 20px;
+        text-align: center;
+        background-position: center top;
+        background-size: cover;
+        padding-top: 180px;
+    }
+    
+    .product__card:nth-child(even) {
+        padding: 20px;
+        padding-top: 180px;
+    }
+    
+    .product__title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .product__desc {
+        font-size: 14px;
+    }
+    
+    /* Feedback */
+    .feedback {
+        padding-bottom: 50px;
+    }
+    
+    .feedback .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .feedback__img {
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
+    
+    .feedback__text {
+        width: 100%;
+    }
+    
+    .feedback__desc {
+        font-size: 14px;
+        margin: 20px 0;
+    }
+    
+    .feedbacl__author {
+        font-size: 18px;
+    }
+    
+    /* Download */
+    .download {
+        padding: 40px 0;
+    }
+    
+    .download .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .download__title {
+        font-size: 28px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 50px 0;
+    }
+    
+    .footer .container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+    
+    .footer__contacts {
+        align-items: center;
+    }
+    
+    .footer__logo {
+        margin-bottom: 15px;
+    }
+    
+    .footer__list {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .footer_list-title {
+        text-align: center;
+    }
+    
+    .footer__socials-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
 }
 
-.welcome__text {
-    width: 100%; /* Занимаем всю ширину */
-    text-align: center; /* Центрируем текст */
-    padding: 0 15px; /* Добавляем отступы с боков */
+/* iPhone X, 15 Pro (390px - 430px) - уточнения */
+@media (min-width: 375px) and (max-width: 430px) {
+    /* Учет выреза (notch) для iPhone X и новее */
+    .header {
+        padding-top: constant(safe-area-inset-top);
+        padding-top: env(safe-area-inset-top);
+    }
+    
+    .footer {
+        padding-bottom: constant(safe-area-inset-bottom);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
 }
 
-.food-list .container {
-    flex-direction: column; /* Изменяем на колонку для мобильных */
-    align-items: center; /* Центрируем элементы */
+/* iPhone 15 Pro Max (430px) - чуть больше отступов */
+@media (min-width: 425px) and (max-width: 440px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .welcome__title {
+        font-size: 36px;
+    }
+    
+    .product__card {
+        max-width: 360px;
+    }
 }
 
-.food-list__card {
-    width: 100%; /* Занимаем всю ширину */
-    max-width: 320px; /* Максимальная ширина карточек */
-    margin-bottom: 20px; /* Отступ между карточками */
+/* Модальное окно - адаптив */
+@media (max-width: 480px) {
+    .modal__content {
+        width: 90%;
+        margin: 30% auto;
+        padding: 20px;
+    }
+    
+    .modal__content h2 {
+        font-size: 20px;
+    }
+    
+    .modal__content p {
+        font-size: 14px;
+    }
 }
 
-.order .container {
-    flex-direction: column; /* Изменяем на колонку для мобильных */
-    align-items: center; /* Центрируем контент */
+
+/* Модальное окно - стили (добавьте в конец, если отсутствуют) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.order__img {
-    max-width: 100%; /* Чтобы изображение адаптировалось */
-    height: auto; /* Сохраняем пропорции изображения */
+.modal__content {
+    background-color: #1C1C1C;
+    margin: 15% auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
 }
 
-.product .container {
-    flex-direction: column; /* Расположение карточек в колонку */
-    align-items: center; /* Центрируем карточки */
+.modal__close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #F6762C;
 }
 
-.product__card {
-    width: 100%; /* Занимаем всю ширину */
-    max-width: 320px; /* Ограничиваем максимальную ширину */
-    padding: 20px; /* Увеличиваем отступы внутри карточек */
+.modal__close:hover {
+    color: #fff;
 }
-
-/* Уменьшение размеров шрифтов для мобильных */
-.welcome__title {
-    font-size: 32px; /* Уменьшаем размер заголовка */
-}
-
-.food-list__title {
-    font-size: 18px; /* Уменьшаем размер заголовка в карточках еды */
-}
-
-.order__title {
-    font-size: 24px; /* Уменьшаем размер заголовка для бургера */
-}
-
-.product__title {
-    font-size: 24px; /* Уменьшаем заголовок карточек товаров */
-}
-
-/* Изменяем размер кнопок */
-.btn {
-    width: 100%; /* Кнопка занимает всю ширину */
-    margin: 10px 0; /* Отступы между кнопками */
-} 
-}
-
 
 /* ! МОДАЛЬНОЕ ОКНО */
+
 .modal { 
     display: none;  
     position: fixed;  
